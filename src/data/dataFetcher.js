@@ -1,7 +1,7 @@
 import {
   PropertyAdvertisement,
   PropertyAdvertisementsList,
-} from "./propertyAdvertisement";
+} from "./propertyAdvertisement"
 
 export class DataFetcher {
   /**
@@ -9,7 +9,7 @@ export class DataFetcher {
    * @param {string} dataSource
    */
   constructor(dataSource) {
-    this._dataSource = dataSource;
+    this._dataSource = dataSource
   }
 
   /**
@@ -17,12 +17,12 @@ export class DataFetcher {
    * @returns {PropertyAdvertisementsList}
    */
   async fetchSource() {
-    let response = await fetch(this._dataSource);
+    let response = await fetch(this._dataSource)
 
     if (response.ok) {
-      let data = await response.json();
+      let data = await response.json()
 
-      const advertisementInstances = [];
+      const advertisementInstances = []
 
       for (let advertisement of data) {
         const advertisementInstance = new PropertyAdvertisement(
@@ -36,16 +36,16 @@ export class DataFetcher {
           advertisement.location,
           advertisement.equipments,
           advertisement.tags
-        );
+        )
 
-        advertisementInstances.push(advertisementInstance);
+        advertisementInstances.push(advertisementInstance)
       }
 
-      return new PropertyAdvertisementsList(advertisementInstances);
+      return new PropertyAdvertisementsList(advertisementInstances)
     } else {
-      const message = `Oups ! Une erreur s'est produite.\n\nHTTP-Error-${response.status} while fetching ${this._dataSource}`;
+      const message = `Oups ! Une erreur s'est produite.\n\nHTTP-Error-${response.status} while fetching ${this._dataSource}`
 
-      window.alert(message);
+      window.alert(message)
     }
   }
 }

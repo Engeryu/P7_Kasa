@@ -1,21 +1,21 @@
-import React from "react";
+import React from "react"
 
-import Error404 from "../Error404/Error404";
-import Carousel from "../../components/Carousel/Carousel";
-import Collapse from "../../components/Collapse/Collapse";
-import "./Advertisement.css";
+import Error404 from "../Error404/Error404"
+import Carousel from "../../components/Carousel/Carousel"
+import Collapse from "../../components/Collapse/Collapse"
+import "./Advertisement.css"
 
 class Advertisement extends React.Component {
   render() {
-    const { id } = this.props.match.params;
-    const advertisementToDisplay = this.props.advertisementsList.findById(id);
+    const { id } = this.props.match.params
+    const advertisementToDisplay = this.props.advertisementsList.findById(id)
 
     if (!advertisementToDisplay) {
-      return <Error404 />;
+      return <Error404 />
     }
 
-    const ad = advertisementToDisplay;
-    const ratingScale = [1, 2, 3, 4, 5];
+    const ad = advertisementToDisplay
+    const ratingScale = [1, 2, 3, 4, 5]
 
     return (
       <main className="Advertisement">
@@ -72,8 +72,8 @@ class Advertisement extends React.Component {
           </div>
         </section>
       </main>
-    );
+    )
   }
 }
 
-export default Advertisement;
+export default Advertisement

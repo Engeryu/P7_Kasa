@@ -1,38 +1,38 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import "./Carousel.css";
+import "./Carousel.css"
 
 class Carousel extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       currentPictureIndex: 0,
-    };
-    this.updateCurrentPicture = this.updateCurrentPicture.bind(this);
+    }
+    this.updateCurrentPicture = this.updateCurrentPicture.bind(this)
   }
 
   updateCurrentPicture(newIndex) {
     this.setState({
       currentPictureIndex: newIndex,
-    });
+    })
   }
 
   /**
    * @param {boolean} nextClicked
    */
   updatePicture(nextClicked = true) {
-    const current = this.state.currentPictureIndex;
-    const quantity = this.props.pictures.length;
+    const current = this.state.currentPictureIndex
+    const quantity = this.props.pictures.length
     const pictureToDisplayIndex = nextClicked
       ? (current + 1) % quantity
-      : (current + quantity - 1) % quantity;
-    this.updateCurrentPicture(pictureToDisplayIndex);
+      : (current + quantity - 1) % quantity
+    this.updateCurrentPicture(pictureToDisplayIndex)
   }
 
   render() {
-    const pictures = this.props.pictures;
+    const pictures = this.props.pictures
 
     return (
       <section className="carousel">
@@ -71,12 +71,12 @@ class Carousel extends React.Component {
           ""
         )}
       </section>
-    );
+    )
   }
 }
 
 Carousel.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string),
-};
+}
 
-export default Carousel;
+export default Carousel

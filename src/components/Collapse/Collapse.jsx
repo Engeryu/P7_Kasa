@@ -1,24 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import "./Collapse.css";
+import "./Collapse.css"
 
 class Collapse extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isOpen: false,
-    };
-    this.updateIsOpen = this.updateIsOpen.bind(this);
+    }
+    this.updateIsOpen = this.updateIsOpen.bind(this)
   }
 
   updateIsOpen() {
-    this.setState({ isOpen: !this.state.isOpen });
+    this.setState({ isOpen: !this.state.isOpen })
   }
 
   render() {
-    const collapseIcon = `fas fa-chevron-${this.state.isOpen ? "up" : "down"}`;
+    const collapseIcon = `fas fa-chevron-${this.state.isOpen ? "up" : "down"}`
 
     return (
       <section
@@ -35,13 +35,13 @@ class Collapse extends React.Component {
             }`} key={`item-${index}`}>{item}</section>
           ))}
       </section>
-    );
+    )
   }
 }
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
   textArray: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+}
 
-export default Collapse;
+export default Collapse

@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import "./Banner.css";
+import "./Banner.css"
 
 class Banner extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class Banner extends React.Component {
 
         <h1>{this.props.title}</h1>
       </article>
-    );
+    )
   }
 }
 
@@ -19,6 +19,6 @@ Banner.propTypes = {
   imgSource: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
   title: PropTypes.string,
-};
+}
 
-export default Banner;
+export default Banner

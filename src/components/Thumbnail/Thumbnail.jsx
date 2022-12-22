@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "react-router-dom"
 
-import "./Thumbnail.css";
+import "./Thumbnail.css"
 
 class Thumbnail extends React.Component {
   render() {
@@ -24,7 +24,7 @@ class Thumbnail extends React.Component {
           <h2 className="thumbnail__title">{this.props.title}</h2>
         </article>
       </Link>
-    );
+    )
   }
 }
 
@@ -33,6 +33,6 @@ Thumbnail.propTypes = {
   cover: PropTypes.string,
   title: PropTypes.string.isRequired,
   location: PropTypes.string,
-};
+}
 
-export default Thumbnail;
+export default Thumbnail

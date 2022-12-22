@@ -24,16 +24,16 @@ export class PropertyAdvertisement {
     equipments,
     tags
   ) {
-    this.id = id;
-    this.title = title;
-    this.cover = cover;
-    this.pictures = pictures;
-    this.description = description;
-    this.host = host;
-    this.rating = rating;
-    this.location = location;
-    this.equipments = equipments;
-    this.tags = tags;
+    this.id = id
+    this.title = title
+    this.cover = cover
+    this.pictures = pictures
+    this.description = description
+    this.host = host
+    this.rating = rating
+    this.location = location
+    this.equipments = equipments
+    this.tags = tags
   }
 }
 
@@ -43,7 +43,7 @@ export class PropertyAdvertisementsList {
    * @param {Array.PropertyAdvertisement} advertisements
    */
   constructor(advertisements) {
-    this.advertisements = advertisements;
+    this.advertisements = advertisements
   }
 
   /**
@@ -53,8 +53,8 @@ export class PropertyAdvertisementsList {
   findById(id) {
     const advertisementsAssociatedToId = this.advertisements.find(
       (ad) => ad.id === id
-    );
+    )
 
-    return advertisementsAssociatedToId;
+    return advertisementsAssociatedToId
   }
 }

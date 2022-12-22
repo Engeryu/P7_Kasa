@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
-import "./Error404.css";
+import "./Error404.css"
 
 class Error404 extends React.Component {
   render() {
@@ -17,8 +17,8 @@ class Error404 extends React.Component {
           Retourner sur la page d'accueil
         </Link>
       </main>
-    );
+    )
   }
 }
 
-export default Error404;
+export default Error404

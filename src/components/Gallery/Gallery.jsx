@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Thumbnail from "../Thumbnail/Thumbnail";
-import "./Gallery.css";
-import { PropertyAdvertisement } from "../../data/propertyAdvertisement";
+import Thumbnail from "../Thumbnail/Thumbnail"
+import "./Gallery.css"
+import { PropertyAdvertisement } from "../../data/propertyAdvertisement"
 
 class Gallery extends React.Component {
   render() {
@@ -21,13 +21,13 @@ class Gallery extends React.Component {
           ))}
         </section>
       </article>
-    );
+    )
   }
 }
 
 Gallery.propTypes = {
   advertisements: PropTypes.arrayOf(PropTypes.instanceOf(PropertyAdvertisement))
     .isRequired,
-};
+}
 
-export default Gallery;
+export default Gallery
