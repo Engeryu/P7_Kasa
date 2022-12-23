@@ -60,7 +60,7 @@
 .carousel i {
   margin: 1.5rem;
 
-  font-size: 5rem;
+  font-size: 100px;
   text-shadow: 0 0 2px rgb(0, 0, 0, 70%);
 
   cursor: pointer;
@@ -75,13 +75,13 @@
   text-shadow: 0 0 2px rgb(0, 0, 0, 70%);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .carousel {
     border-radius: 1rem;
   }
 
   .carousel i {
-    font-size: 3.5rem;
+    font-size: 75px;
   }
 
   .carousel__counter {
@@ -89,15 +89,14 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .carousel {
     border-radius: 0.5rem;
   }
 
   .carousel i {
     margin: 1rem;
-
-    font-size: 2rem;
+    font-size: 50px;
   }
 
   .carousel__counter {

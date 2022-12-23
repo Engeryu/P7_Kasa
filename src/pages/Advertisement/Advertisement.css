@@ -1,40 +1,54 @@
+.Advertisement {
+  max-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Advertisement .adverinfo {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1440px;
+}
+
 .Advertisement__header {
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
-  padding: 2rem 0 0 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 25px 0;
 }
 
 .Advertisement__summary-box {
-  max-width: calc(100% - 16rem);
-  margin: 0 4rem 0 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0;
 }
 
 .Advertisement__title {
   margin: 0;
-
-  font-size: var(--h2-size);
-  line-height: 1.35;
+  font-size: 36px;
+  line-height: 1.42;
 }
 
 .Advertisement__location {
-  margin: 0.5rem 0;
-
-  font-size: var(--h5-size);
+  margin: 1% 0;
+  font-size: 36px;
 }
 
 .Advertisement__tags-box {
   display: flex;
-  margin: 1rem 0 0 0;
+  flex-flow: row wrap;
+  margin: 16px 0 0 0;
 }
 
 .Advertisement__tag {
   display: inline-block;
-
-  margin: 0.25rem 1rem 0.25rem 0;
-  padding: 0.25rem 2rem;
-  border-radius: 0.5rem;
+  margin: 5px 10px 5px 0;
+  padding: 5px 40px;
+  border-radius: 10px;
 
   color: white;
 
@@ -42,7 +56,9 @@
 }
 
 .Advertisement__aside-box {
-  width: 12rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
 }
 
 .Advertisement__host-box {
@@ -53,8 +69,10 @@
 
 .Advertisement__host-name {
   margin: 0 1rem 0 0;
-
+  width: 125px;
   font-size: var(--h5-size);
+  display: flex;
+  text-align: end;
 }
 
 .Advertisement__host-picture {
@@ -89,13 +107,34 @@
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  margin: 0 0 2rem 0;
+  gap: 100px;
+  margin: 0 0 40px 0;
 }
 
 .Advertisement__collapse {
-  width: 36rem;
+  width: 45%
 }
 
+@media only screen and (max-width: 1020px) {
+  .Advertisement__collapses-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 0 40px 0;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 638px) {
+  .Advertisement__aside-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+
+
+/* 
 @media screen and (min-width: 992px) {
   .Advertisement__header {
     padding: 1.5rem 0 0 0;
@@ -120,11 +159,6 @@
     flex-direction: column;
 
     padding: 0.5rem 0 0 0;
-  }
-
-  .Advertisement__summary-box {
-    max-width: 100%;
-    margin: 0;
   }
 
   .Advertisement__title {
@@ -189,4 +223,4 @@
   .Advertisement__collapse .collapse {
     margin: 1rem 0 0 0;
   }
-}
+} */

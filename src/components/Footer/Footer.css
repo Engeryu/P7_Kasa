@@ -15,15 +15,15 @@ footer img {
 
 footer p {
   color: white;
-  font-size: var(--h3-size);
+  font-size: 24px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 424px) {
   footer img {
     height: 2rem;
   }
 
   footer p {
-    font-size: var(--txt-size);
+    font-size: 12px;
   }
 }

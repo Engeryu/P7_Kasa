@@ -23,7 +23,7 @@ async function initApp(dataFetcher) {
     <React.StrictMode>
       <Router>
         <div className="content-wrapper">
-          <Header />
+          <Header className="nav_page" />
 
           <Switch>
             <Route exact path="/">

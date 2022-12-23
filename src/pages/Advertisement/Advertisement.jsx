@@ -21,7 +21,7 @@ class Advertisement extends React.Component {
       <main className="Advertisement">
         <Carousel pictures={ad.pictures} />
 
-        <section>
+        <section className="Adverinfo">
           <header className="Advertisement__header">
             <div className="Advertisement__summary-box">
               <h1 className="Advertisement__title">{ad.title}</h1>

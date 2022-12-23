@@ -31,8 +31,6 @@ html {
 
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-weight: 500;
-
-  scroll-behavior: smooth;
   width: 100%;
 }
 
@@ -91,25 +89,17 @@ ul {
    =============== */
 
 .content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   max-width: 1440px;
   height: 100%;
-  min-height: 100vh;
   margin: auto;
-  padding: 0 3rem;
+  padding: 0 1%;
 }
 
-@media screen and (min-width: 992px) {
-  .content-wrapper {
-    padding: 0 2rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .content-wrapper {
-    width: calc(100% - 2rem);
-    max-width: 90%;
-    padding: 0;
-  }
+.home{
+  max-width: 100%;
 }
 
 /* ===============

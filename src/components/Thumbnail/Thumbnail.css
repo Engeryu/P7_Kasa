@@ -1,12 +1,14 @@
 .thumbnail-wrapper {
   display: flex;
   justify-content: center;
-  flex: 1 1 30%
+  flex: 1 1 32%
 }
 
 .thumbnail {
-  width: 21.25rem;
-  height: 21.25rem
+  width: 100%;
+  min-width: 340px;
+  max-width: 425px;
+  height: 340px
 }
 
 .thumbnail {
@@ -27,8 +29,10 @@
 
 .thumbnail__filter {
   position: absolute;
-  top: 0;
-  background: linear-gradient(185deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5))
+  bottom: 0;
+  height: 400px;
+  background: linear-gradient(185deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5));
+  width: 100%
 }
 
 .thumbnail__title {
@@ -41,14 +45,10 @@
   font-weight: 500
 }
 
-@media screen and (max-width: 768px) {
-  .thumbnail,
-  .thumbnail__filter {
-    max-width: 100%;
-    height: 16rem
-  }
-
+@media screen and (max-width: 1024px) {
   .thumbnail {
-    margin: 0.5rem 0;
+    width: 100%;
+    height: 255px;
+    min-width: 255px;
   }
 }

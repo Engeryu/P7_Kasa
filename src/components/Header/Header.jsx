@@ -7,7 +7,7 @@ import logo from "../../logo.svg";
 class Header extends React.Component {
   render() {
     return (
-      <header>
+      <header className="headerNav">
         <Link to="/">
           <img className="header-logo" src={logo} alt="Kasa" />
         </Link>
